@@ -1,48 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily Habit Tracker</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sadie Gibson | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 
-    <div class="container">
+<body>
 
-      <header class="app-header">
-        <h1>Daily Habit Tracker</h1>
-        <p class="subtitle">Build better habits, one day at a time.</p>
-      </header>
+  <header class="hero">
+    <h1>Sadie Gibson</h1>
+    <p>UX/UI & Digital Media Student</p>
+  </header>
 
-      <form class="input-group" id="addForm">
-        <input
-          type="text"
-          id="habitInput"
-          class="habit-input"
-          placeholder="Enter a new habit..."
-          maxlength="80"
-          autocomplete="off"
-          aria-label="New habit name"
-        />
-        <button type="submit" class="add-btn" aria-label="Add habit">Add</button>
-      </form>
+  <main class="container">
 
-      <!-- Error shown when user submits blank or duplicate input -->
-      <p class="error hidden" id="inputError" role="alert" aria-live="polite"></p>
+    <!-- ABOUT -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a digital media student focused on UX/UI design and front-end development.
+        I enjoy building clean, user-centered interfaces and learning how design and functionality work together.
+      </p>
+    </section>
 
-      <p class="summary hidden" id="summary"></p>
+    <!-- PROJECT 1 -->
+    <section>
+      <h2>Featured Projects</h2>
 
-      <!-- role="list" restores list semantics in screen readers when list-style is removed -->
-      <ul class="habit-list" id="habitList" role="list"></ul>
+      <div class="project-card">
 
-      <div class="empty hidden" id="emptyState">
-        <span class="empty-icon" aria-hidden="true">☑</span>
-        <p>No habits yet — add one above.</p>
+        <h3>Daily Habit Tracker</h3>
+
+        <p><strong>Live:</strong>
+          <a href="https://sadieg123.github.io/Portfolio-Reflection/" target="_blank">
+            View Project
+          </a>
+        </p>
+
+        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, localStorage</p>
+
+        <p>
+          A simple habit tracking application that allows users to add, complete,
+          and delete daily habits. Data persists using localStorage so it remains
+          after refreshing the page.
+        </p>
+
+        <h4>Retrospective</h4>
+        <p>
+          If I revisited this project, I would improve the UI flow by adding habit streaks,
+          better visual feedback for completed tasks, and a more structured mobile layout.
+        </p>
+
       </div>
 
-    </div>
+      <!-- PROJECT 2 (OPTIONAL PLACEHOLDER) -->
+      <div class="project-card" style="margin-top: 1rem;">
 
-    <script src="script.js"></script>
-  </body>
+        <h3>To-Do List Application</h3>
+
+        <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS</p>
+
+        <p>
+          A full-stack web application that allows users to create and manage tasks stored in a database.
+        </p>
+
+        <h4>Retrospective</h4>
+        <p>
+          I would improve backend structure and enhance the UI to make task management more intuitive.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <p>
+        HTML • CSS • JavaScript • UX/UI Design • Git • GitHub • localStorage • Responsive Design
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Sadie Gibson</p>
+  </footer>
+
+</body>
 </html>
