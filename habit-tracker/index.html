@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Habit Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="app-header">
+        <h1>Daily Habit Tracker</h1>
+        <p class="subtitle">Build better habits, one day at a time.</p>
+      </header>
+
+      <form class="input-group" id="addForm">
+        <input
+          type="text"
+          id="habitInput"
+          class="habit-input"
+          placeholder="Enter a new habit..."
+          maxlength="80"
+          autocomplete="off"
+          aria-label="New habit name"
+        />
+        <button type="submit" class="add-btn" aria-label="Add habit">Add</button>
+      </form>
+
+      <!-- Error shown when user submits blank or duplicate input -->
+      <p class="error hidden" id="inputError" role="alert" aria-live="polite"></p>
+
+      <p class="summary hidden" id="summary"></p>
+
+      <!-- role="list" restores list semantics in screen readers when list-style is removed -->
+      <ul class="habit-list" id="habitList" role="list"></ul>
+
+      <div class="empty hidden" id="emptyState">
+        <span class="empty-icon" aria-hidden="true">☑</span>
+        <p>No habits yet — add one above.</p>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

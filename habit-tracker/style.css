@@ -1,0 +1,124 @@
+:root {
+  --bg: #f5f0e8;
+  --card: #fdfaf5;
+  --text: #3b2a1a;
+  --muted: #8a7560;
+  --accent: #c26b4a;
+  --border: #ddd0bc;
+  --done-bg: #eaefe3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(194,107,74,0.15);
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.error {
+  color: #b54040;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.9rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+li.completed {
+  background: var(--done-bg);
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #b54040;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+
+/* Required by JS for show/hide logic */
+.hidden {
+  display: none !important;
+}
